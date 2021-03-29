@@ -1,6 +1,8 @@
 package com.CannonRandomNumber.main;
 
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -18,7 +20,9 @@ public class CannonActivity extends AppCompatActivity {
 
     TextView textView_result;
     Button button_shot;
-    ImageView green_ball;
+    ImageView green_ball,cann_effect;
+    SoundPool soundPool;
+    int soundID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +33,7 @@ public class CannonActivity extends AppCompatActivity {
         button_shot = findViewById(R.id.Button_shot);
         green_ball = findViewById(R.id.greenball);
 
+
         final Intent intent = getIntent();
         Bundle bundle = intent.getExtras();//값 넘겨받기
 
@@ -38,6 +43,8 @@ public class CannonActivity extends AppCompatActivity {
         final int array[] = new int[N];
         final int[] A = {0};
         final Animation shot1 = AnimationUtils.loadAnimation(this,R.anim.ball_start);
+        soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC,0);
+        soundID = soundPool.load(this,R.raw.cann_soun,0);
 
 
 
@@ -55,12 +62,16 @@ public class CannonActivity extends AppCompatActivity {
             public void onClick(View view) {
                 green_ball.startAnimation(shot1);
                 textView_result.setText("");
+                soundPool.play(soundID,1f,1f,0,0,1f);
+
+
 
                 new Handler().postDelayed(new Runnable()
                 {
                     @Override
                     public void run()
-                    {                              //딜레이 넣을 공간
+                    {//딜레이 넣을 공간
+
                         if (spanking == false) { //중복체거 체크가 해제되있을 경우
                             int result = random.nextInt(N);
                             textView_result.setText("" + result);

@@ -8,8 +8,6 @@
     android:orientation="vertical"
     android:background="@drawable/cannon">
 
-
-
     <ImageView
         android:id="@+id/greenball"
         android:layout_width="180dp"
@@ -25,7 +23,8 @@
         android:background="@drawable/cannon_button"
         android:layout_marginTop="550dp"
         android:layout_marginLeft="100dp"
-        style="@style/Widget.AppCompat.Button.Borderless"/>
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:soundEffectsEnabled="false"/>
 
     <TextView
         android:id="@+id/TextView_result"
