@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
+    android:id="@+id/lobby_background"
     android:background="@drawable/lobby">
 
     <EditText
@@ -35,6 +36,17 @@
         android:textStyle="bold"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="475dp"
+        />
+
+    <Button
+        android:id="@+id/Button_night"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:text="night mode"
+        android:textStyle="bold"
+        android:background="#00FFFFFF"
+        android:layout_marginLeft="165dp"
+        android:layout_marginTop="685dp"
         />
 
     <ImageView
