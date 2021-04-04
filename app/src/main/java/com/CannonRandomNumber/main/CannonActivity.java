@@ -14,6 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import java.util.Random;
 
@@ -23,7 +24,7 @@ public class CannonActivity extends AppCompatActivity {
     Button button_shot;
     ImageView green_ball;
     SoundPool soundPool;
-    RelativeLayout relativeLayout;
+    ConstraintLayout constraintLayout;
     int soundID;
 
     @Override
@@ -34,7 +35,7 @@ public class CannonActivity extends AppCompatActivity {
         textView_result = findViewById(R.id.TextView_result);
         button_shot = findViewById(R.id.Button_shot);
         green_ball = findViewById(R.id.greenball);
-        relativeLayout = findViewById(R.id.cannon_background);
+        constraintLayout = findViewById(R.id.cannon_background);
 
 
         final Intent intent = getIntent();
@@ -51,9 +52,9 @@ public class CannonActivity extends AppCompatActivity {
         soundID = soundPool.load(this,R.raw.cann_soun,0);
 
         if (night == true) {
-            relativeLayout.setBackgroundResource(R.drawable.cannon_night);
+            constraintLayout.setBackgroundResource(R.drawable.cannon_night);
         } else {
-            relativeLayout.setBackgroundResource(R.drawable.cannon);
+            constraintLayout.setBackgroundResource(R.drawable.cannon);
         }
 
 

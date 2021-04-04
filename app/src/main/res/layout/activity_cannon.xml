@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,27 +14,37 @@
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:background="@drawable/greenball"
-        android:layout_marginTop="515dp"
-        android:layout_marginLeft="110dp"/>
+        app:layout_constraintBottom_toBottomOf="@+id/Button_shot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView_result"
+        app:layout_constraintVertical_bias="0.725" />
 
     <Button
         android:id="@+id/Button_shot"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:background="@drawable/cannon_button"
-        android:layout_marginTop="550dp"
-        android:layout_marginLeft="100dp"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:soundEffectsEnabled="false"/>
+        android:soundEffectsEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/TextView_result"
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:gravity="center"
         android:textSize="80pt"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="50dp"
-        android:gravity="center"/>
+        app:layout_constraintBottom_toTopOf="@+id/Button_shot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,20 +13,28 @@
         android:id="@+id/EditText_N"
         android:layout_width="130dp"
         android:layout_height="100dp"
-        android:layout_marginTop="350dp"
-        android:layout_marginLeft="100dp"
-        android:textSize="30pt"
         android:cursorVisible="false"
-        android:gravity="end"/>
+        android:gravity="end"
+        android:textSize="30pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.535" />
 
     <Button
         android:id="@+id/Button_next"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="86dp"
         android:layout_height="43dp"
-        android:layout_marginLeft="275dp"
-        android:layout_marginTop="455dp"
         android:background="@drawable/next"
-        style="@style/Widget.AppCompat.Button.Borderless"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.671" />
 
     <CheckBox
         android:id="@+id/Checkbox_spanking"
@@ -34,36 +42,49 @@
         android:layout_height="wrap_content"
         android:text="중복제거"
         android:textStyle="bold"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="475dp"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Button_next"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.686" />
 
     <Button
         android:id="@+id/Button_night"
         android:layout_width="70dp"
         android:layout_height="35dp"
+        android:background="#00FFFFFF"
         android:text="night mode"
         android:textStyle="bold"
-        android:background="#00FFFFFF"
-        android:layout_marginLeft="165dp"
-        android:layout_marginTop="685dp"
-        />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:background="@drawable/greenball"
-        android:layout_marginTop="515dp"
-        android:layout_marginLeft="110dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/EditText_N"
+        app:layout_constraintVertical_bias="0.863" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:background="@drawable/cannon_button"
-        android:layout_marginTop="550dp"
-        android:layout_marginLeft="100dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="1.0" />
 
 
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

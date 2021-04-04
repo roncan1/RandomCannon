@@ -2,6 +2,7 @@ package com.CannonRandomNumber.main;
 
 import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editText_N;
     Button button_next,button_night;
     CheckBox checkBox_spanking;
-    RelativeLayout relativeLayout;
+    ConstraintLayout constraintLayout;
     boolean flag = false;
 
     @Override
@@ -28,16 +29,16 @@ public class MainActivity extends AppCompatActivity {
         button_next = findViewById(R.id.Button_next);
         checkBox_spanking = findViewById(R.id.Checkbox_spanking);
         button_night = findViewById(R.id.Button_night);
-        relativeLayout = findViewById(R.id.lobby_background);
+        constraintLayout = findViewById(R.id.lobby_background);
 
         button_night.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (flag == false) {
-                    relativeLayout.setBackgroundResource(R.drawable.lobby_night);
+                    constraintLayout.setBackgroundResource(R.drawable.lobby_night);
                     flag = true;
                 } else {
-                    relativeLayout.setBackgroundResource(R.drawable.lobby);
+                    constraintLayout.setBackgroundResource(R.drawable.lobby);
                     flag = false;
                 }
             }
