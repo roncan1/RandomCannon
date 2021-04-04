@@ -43,8 +43,10 @@
         android:textSize="80pt"
         app:layout_constraintBottom_toTopOf="@+id/Button_shot"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.519" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

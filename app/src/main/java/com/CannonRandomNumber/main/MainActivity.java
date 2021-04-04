@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,7 @@ import android.widget.RelativeLayout;
 public class MainActivity extends AppCompatActivity {
 
     EditText editText_N;
-    Button button_next,button_night;
+    Button button_next,button_night,easter_egg;
     CheckBox checkBox_spanking;
     ConstraintLayout constraintLayout;
     boolean flag = false;
@@ -30,6 +31,21 @@ public class MainActivity extends AppCompatActivity {
         checkBox_spanking = findViewById(R.id.Checkbox_spanking);
         button_night = findViewById(R.id.Button_night);
         constraintLayout = findViewById(R.id.lobby_background);
+        easter_egg = findViewById(R.id.easter_egg);
+
+
+        easter_egg.setOnClickListener(new View.OnClickListener() {
+            int easter = 0;
+            @Override
+            public void onClick(View view) {
+                easter++;
+                if (easter == 5) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://cjmpm.tistory.com/"));
+
+                    startActivity(intent);
+                }
+            }
+        });
 
         button_night.setOnClickListener(new View.OnClickListener() {
             @Override

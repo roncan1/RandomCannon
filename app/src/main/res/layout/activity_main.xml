@@ -15,13 +15,16 @@
         android:layout_height="100dp"
         android:cursorVisible="false"
         android:gravity="end"
+        android:hint="000"
+        android:inputType="number"
+        android:maxLength="3"
         android:textSize="30pt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.409"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
+        app:layout_constraintVertical_bias="0.551" />
 
     <Button
         android:id="@+id/Button_next"
@@ -61,6 +64,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.977" />
+
+
+    <Button
+        android:id="@+id/easter_egg"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="116dp"
+        android:layout_height="94dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/Button_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.282" />
 
     <ImageView
         android:id="@+id/imageView2"

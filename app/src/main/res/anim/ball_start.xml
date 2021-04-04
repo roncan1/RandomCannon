@@ -5,7 +5,7 @@
     <translate
         android:fromYDelta="0%"
         android:toYDelta="-570%"
-        android:duration="750"
+        android:duration="600"
         />
     <scale
         android:fromXScale="1.0"
@@ -20,7 +20,7 @@
         android:fromYDelta="100%"
         android:toYDelta="240%"
         android:startOffset="750"
-        android:duration="750"
+        android:duration="900"
         />
     <scale
         android:fromXScale="1.0"

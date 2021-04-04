@@ -48,6 +48,7 @@ public class CannonActivity extends AppCompatActivity {
         final int array[] = new int[N];
         final int[] A = {0};
         final Animation shot1 = AnimationUtils.loadAnimation(this,R.anim.ball_start);
+        final int[] CHECK = {0};
         soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC,0);
         soundID = soundPool.load(this,R.raw.cann_soun,0);
 
@@ -74,9 +75,10 @@ public class CannonActivity extends AppCompatActivity {
                 green_ball.startAnimation(shot1);
                 textView_result.setText("");
                 soundPool.play(soundID,1f,1f,0,0,1f);
+                button_shot.setBackgroundResource(R.drawable.cannon_button2);
 
 
-
+                if (CHECK[0] == A[0]) {
                 new Handler().postDelayed(new Runnable()
                 {
                     @Override
@@ -84,16 +86,30 @@ public class CannonActivity extends AppCompatActivity {
                     {//딜레이 넣을 공간
 
                         if (spanking == false) { //중복체거 체크가 해제되있을 경우
-                            int result = random.nextInt(N);
+                            int result = random.nextInt(N)+1;
                             textView_result.setText("" + result);
                         } else { //중복제거 체크가 설정되있을 경우
                             textView_result.setText("" + array[A[0]]);
-                            A[0]++;
+                            if (A[0] > N){
+                                Intent intent = new Intent(CannonActivity.this, MainActivity.class);
+                                startActivity(intent);
+                            }
                         }
+                        A[0]++;
+                        button_shot.setBackgroundResource(R.drawable.cannon_button);
+
                     }
                 }, 1500); // 딜레이 시간
+                } else {
+                    A[0]++;
+                }
+                CHECK[0]++;
+
             }
         });
+
+
+
 
     }
 
