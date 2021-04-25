@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editText_N = findViewById(R.id.EditText_N);
-        button_next = findViewById(R.id.Button_next);
-        checkBox_spanking = findViewById(R.id.Checkbox_spanking);
-        button_night = findViewById(R.id.Button_night);
-        constraintLayout = findViewById(R.id.lobby_background);
-        easter_egg = findViewById(R.id.easter_egg);
+        editText_N = (EditText) findViewById(R.id.EditText_N);
+        button_next = (Button) findViewById(R.id.Button_next);
+        checkBox_spanking = (CheckBox) findViewById(R.id.Checkbox_spanking);
+        button_night = (Button) findViewById(R.id.Button_night);
+        constraintLayout = (ConstraintLayout) findViewById(R.id.lobby_background);
+        easter_egg = (Button) findViewById(R.id.easter_egg);
 
 
         easter_egg.setOnClickListener(new View.OnClickListener() {
@@ -39,9 +39,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 easter++;
-                if (easter == 5) {
+                easter_egg.setBackgroundResource(R.drawable.easteregg);
+                if (easter == 3) {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://cjmpm.tistory.com/"));
-
                     startActivity(intent);
                 }
             }

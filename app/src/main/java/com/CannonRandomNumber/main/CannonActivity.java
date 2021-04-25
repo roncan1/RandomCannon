@@ -32,10 +32,10 @@ public class CannonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cannon);
 
-        textView_result = findViewById(R.id.TextView_result);
-        button_shot = findViewById(R.id.Button_shot);
-        green_ball = findViewById(R.id.greenball);
-        constraintLayout = findViewById(R.id.cannon_background);
+        textView_result = (TextView) findViewById(R.id.TextView_result);
+        button_shot = (Button) findViewById(R.id.Button_shot);
+        green_ball = (ImageView) findViewById(R.id.greenball);
+        constraintLayout = (ConstraintLayout) findViewById(R.id.cannon_background);
 
 
         final Intent intent = getIntent();
@@ -89,8 +89,9 @@ public class CannonActivity extends AppCompatActivity {
                             int result = random.nextInt(N)+1;
                             textView_result.setText("" + result);
                         } else { //중복제거 체크가 설정되있을 경우
-                            textView_result.setText("" + array[A[0]]);
-                            if (A[0] > N){
+                            if (A[0] <= N) {
+                                textView_result.setText("" + array[A[0]]);
+                            }else if (A[0] > N){
                                 Intent intent = new Intent(CannonActivity.this, MainActivity.class);
                                 startActivity(intent);
                             }
