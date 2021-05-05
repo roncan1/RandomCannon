@@ -38,10 +38,9 @@ public class MainActivity extends AppCompatActivity {
             int easter = 0;
             @Override
             public void onClick(View view) {
-                easter++;
-                easter_egg.setBackgroundResource(R.drawable.easteregg);
+                easter++;;
                 if (easter == 3) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://cjmpm.tistory.com/"));
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://cjmpm.tistory.com/category/%EB%8C%80%ED%8F%AC%EB%BD%91%EA%B8%B0%20%EB%AA%A8%EB%B0%94%EC%9D%BC"));
                     startActivity(intent);
                 }
             }

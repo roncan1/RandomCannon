@@ -72,7 +72,7 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="116dp"
         android:layout_height="94dp"
-        android:background="#00FFFFFF"
+        android:background="@drawable/easter_egg"
         app:layout_constraintBottom_toTopOf="@+id/Button_next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
