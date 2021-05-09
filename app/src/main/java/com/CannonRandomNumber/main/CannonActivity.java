@@ -75,7 +75,6 @@ public class CannonActivity extends AppCompatActivity {
                 green_ball.startAnimation(shot1);
                 textView_result.setText("");
                 soundPool.play(soundID,1f,1f,0,0,1f);
-                button_shot.setBackgroundResource(R.drawable.cannon_button2);
 
 
                 if (CHECK[0] == A[0]) {
@@ -97,7 +96,6 @@ public class CannonActivity extends AppCompatActivity {
                             }
                         }
                         A[0]++;
-                        button_shot.setBackgroundResource(R.drawable.cannon_button);
 
                     }
                 }, 1500); // 딜레이 시간
