@@ -1,5 +1,7 @@
 ## An application that generates random numbers🎲, made alone for 10 days
-### [Playstore Link](https://play.google.com/store/apps/details?id=com.CannonRandomNumber.main)
+### [Playstore Link](https://play.google.com/store/apps/details?id=com.CannonRandomNumber.main)  
+### [Tistory Link](https://cjmpm.tistory.com/category/%EB%8C%80%ED%8F%AC%EB%BD%91%EA%B8%B0%20%EB%AA%A8%EB%B0%94%EC%9D%BC)
+
 <center>
 <div align="center" style="text-align:center" >
 <img src="https://user-images.githubusercontent.com/65841016/119266065-3e992300-bc24-11eb-88c6-4f9af0c1be42.PNG" width="20%" height="350px" 
