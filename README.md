@@ -1,4 +1,4 @@
-## 10일동안 만든 모바일 버젼 대포뽑기 입니다!
+## An application that generates random numbers🎲, made alone for 10 days
 ### [Playstore Link](https://play.google.com/store/apps/details?id=com.CannonRandomNumber.main)
 <center>
 <div align="center" style="text-align:center" >
