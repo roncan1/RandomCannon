@@ -40,7 +40,7 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:gravity="center"
-        android:textSize="80pt"
+        android:textSize="50pt"
         app:layout_constraintBottom_toTopOf="@+id/Button_shot"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
