@@ -47,6 +47,7 @@
         android:layout_height="wrap_content"
         android:text="중복제거"
         android:textStyle="bold"
+        android:textColor="#242424"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Button_next"
         app:layout_constraintHorizontal_bias="0.153"
