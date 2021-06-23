@@ -41,6 +41,7 @@
         android:layout_height="300dp"
         android:gravity="center"
         android:textSize="50pt"
+        android:textColor="#454545"
         app:layout_constraintBottom_toTopOf="@+id/Button_shot"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
