@@ -15,6 +15,7 @@ import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
 
+    int a;
     EditText editText_N;
     Button button_next,button_night,easter_egg;
     CheckBox checkBox_spanking;
