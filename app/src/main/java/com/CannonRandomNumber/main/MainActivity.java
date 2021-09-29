@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -62,19 +63,22 @@ public class MainActivity extends AppCompatActivity {
         button_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int N = Integer.parseInt(editText_N.getText().toString());
+                try {
+                    int N = Integer.parseInt(editText_N.getText().toString());
 
-                Intent intent = new Intent(MainActivity.this, CannonActivity.class);
-                intent.putExtra("N", N);//숫자값 보내주기
-                intent.putExtra("night", flag);
+                    Intent intent = new Intent(MainActivity.this, CannonActivity.class);
+                    intent.putExtra("N", N);//숫자값 보내주기
+                    intent.putExtra("night", flag);
 
-                if (checkBox_spanking.isChecked() == true) { //중복제거 값을 보내주기
-                    intent.putExtra("spanking", true);
-                } else {
-                    intent.putExtra("spanking", false);
+                    if (checkBox_spanking.isChecked() == true) { //중복제거 값을 보내주기
+                        intent.putExtra("spanking", true);
+                    } else {
+                        intent.putExtra("spanking", false);
+                    }
+                    startActivity(intent);//화면전환
+                } catch (Exception e) {
+                    Toast.makeText(MainActivity.this, "숫자를 입력해 주세요", Toast.LENGTH_SHORT);
                 }
-
-                startActivity(intent);//화면전환
             }
         });
     }
